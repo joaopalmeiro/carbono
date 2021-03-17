@@ -2,6 +2,7 @@ from pathlib import Path
 
 from pyppeteer import launch
 
+from .constants.misc import CARBON_IMG_SELECTOR
 from .utils import code2url
 
 
@@ -19,7 +20,7 @@ async def from_url(
     await page.goto(url, {"waitUntil": "load"})
 
     if headless:
-        export_container = await page.waitForSelector("#export-container")
+        export_container = await page.waitForSelector(CARBON_IMG_SELECTOR)
         # x, y, width, height
         element_bounds = await export_container.boundingBox()
 
