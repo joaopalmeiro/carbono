@@ -32,3 +32,5 @@ loop.run_until_complete(from_code(code))
 ## Notes
 
 - `poetry add "pyppeteer>=0.2.2,<1"`.
+- [`encodeURIComponent()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) (JavaScript) escapes all characters except:
+  - `A-Z a-z 0-9 - _ . ! ~ * ' ( )`.

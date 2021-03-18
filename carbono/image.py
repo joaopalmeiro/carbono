@@ -2,7 +2,7 @@ from pathlib import Path
 
 from pyppeteer import launch
 
-from .constants.misc import CARBON_IMG_SELECTOR
+from .constants.carbon import CARBON_IMG_SELECTOR
 from .utils import code2url
 
 
