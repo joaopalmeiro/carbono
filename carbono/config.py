@@ -1,12 +1,12 @@
 from urllib.parse import quote
 
 from .constants.carbon import ATTR_TO_QUERY_PARAM
-from .constants.params import EXPORT_SIZE
+from .constants.params import DEFAULT_EXPORT_SIZE
 
 
 class Config:
     def __init__(
-        self, export_size: str = EXPORT_SIZE["X2"], watermark: bool = False
+        self, export_size: str = DEFAULT_EXPORT_SIZE, watermark: bool = False
     ) -> None:
         self.export_size = export_size
         self.watermark = watermark
@@ -15,8 +15,11 @@ class Config:
         result = []
 
         for key, value in vars(self).items():
-            result.append(f"{ATTR_TO_QUERY_PARAM[key.lstrip('_')]}={value}")
+            query_value = str(value).lower() if isinstance(value, bool) else value
 
+            result.append(f"{ATTR_TO_QUERY_PARAM[key.lstrip('_')]}={query_value}")
+
+        # `safe="()&="`
         return quote("&".join(result), safe="&=")
 
     @property
