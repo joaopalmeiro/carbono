@@ -55,12 +55,9 @@ async def from_url(
             {"path": output_path_and_filename, "clip": element_bounds}
         )
     else:
-        print(str(output_path.joinpath("")))
-        print(str(output_path))
-
         await page._client.send(
             "Page.setDownloadBehavior",
-            {"behavior": "allow", "downloadPath": str(output_path.joinpath(""))},
+            {"behavior": "allow", "downloadPath": str(output_path)},
         )
 
         save_image_trigger = await page.waitForSelector("#export-menu")
