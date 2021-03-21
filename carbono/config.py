@@ -17,6 +17,7 @@ class Config:
         theme: str = DEFAULT_THEME,
         window_theme: str = DEFAULT_WINDOW_THEME,
         language: str = DEFAULT_LANGUAGE,
+        drop_shadow: bool = True,
         export_size: str = DEFAULT_EXPORT_SIZE,
         watermark: bool = False,
     ) -> None:
@@ -25,6 +26,7 @@ class Config:
         self.theme = theme
         self.window_theme = window_theme
         self.language = language
+        self.drop_shadow = drop_shadow
 
         self.export_size = export_size
         self.watermark = watermark

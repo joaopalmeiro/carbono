@@ -1,5 +1,7 @@
 from typing import Dict
 
+from .languages import EXTRACTED_LANGUAGES
+
 # export_size/es
 # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1029
 EXPORT_SIZE: Dict[str, str] = {"X1": "1x", "X2": "2x", "X4": "4x"}
@@ -79,8 +81,9 @@ DEFAULT_WINDOW_THEME: str = WINDOW_THEMES["NONE"]
 # 1. short
 # 2. mode
 # 3. mime
-
+# In practice, it is between `mode` and `mime`.
 # - https://github.com/petersolopov/carbonara#post-apicook
+LANGUAGES: Dict[str, str] = EXTRACTED_LANGUAGES
 
 # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1041
-DEFAULT_LANGUAGE: str = "auto"
+DEFAULT_LANGUAGE: str = LANGUAGES["AUTO"]
