@@ -1,6 +1,7 @@
 from typing import Dict
 
 CARBON_URL: str = "https://carbon.now.sh/"
+# Carbonara: "#export-container  .container-bg"
 CARBON_IMG_SELECTOR: str = "#export-container"
 CARBON_MENU_SELECTOR: str = "#export-menu"
 CARBON_PNG_SELECTOR: str = "#export-png"

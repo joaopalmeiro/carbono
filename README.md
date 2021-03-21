@@ -9,15 +9,13 @@ import asyncio
 
 from carbono.image import from_code
 
-code = """
-import asyncio
+code = """import asyncio
 
 async def func():
     return "Hello, World!"
 
 if __name__ == '__main__':
-    asyncio.run(func())
-"""
+    asyncio.run(func())"""
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(from_code(code))

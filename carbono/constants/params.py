@@ -61,3 +61,26 @@ WINDOW_THEMES: Dict[str, str] = {
 
 # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1082
 DEFAULT_WINDOW_THEME: str = WINDOW_THEMES["NONE"]
+
+# language/l
+
+# Note: Bash is named "application/x-sh", for example
+# Export the configuration (JSON) file to confirm the correct value for
+# each supported language (Settings (gear icon) > Misc > Export config)
+
+# Source:
+
+# - https://github.com/carbon-app/carbon/blob/main/components/Carbon.js#L33
+# - https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L624
+# (`LANGUAGE_NAME_HASH[l] || LANGUAGE_MODE_HASH[l] || LANGUAGE_MIME_HASH[l]`)
+# Note: `LANGUAGE_NAME_HASH` uses `"short"` (not `"name"`) as an ID
+# So, for each language, check the following keys in the order presented here
+# and consider the value of the last existing key:
+# 1. short
+# 2. mode
+# 3. mime
+
+# - https://github.com/petersolopov/carbonara#post-apicook
+
+# Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1041
+DEFAULT_LANGUAGE: str = "auto"
