@@ -2,6 +2,10 @@ from typing import Dict
 
 CARBON_URL: str = "https://carbon.now.sh/"
 CARBON_IMG_SELECTOR: str = "#export-container"
+CARBON_MENU_SELECTOR: str = "#export-menu"
+CARBON_PNG_SELECTOR: str = "#export-png"
+CARBON_SVG_SELECTOR: str = "#export-svg"
+CARBON_FILENAME: str = "carbon.png"
 
 ATTR_TO_QUERY_PARAM: Dict[str, str] = {
     "background_color": "bg",

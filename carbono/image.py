@@ -4,7 +4,14 @@ from typing import Optional
 from pyppeteer import launch
 
 from .config import Config
-from .constants.carbon import ATTR_TO_QUERY_PARAM, CARBON_IMG_SELECTOR
+from .constants.carbon import (
+    ATTR_TO_QUERY_PARAM,
+    CARBON_FILENAME,
+    CARBON_IMG_SELECTOR,
+    CARBON_MENU_SELECTOR,
+    CARBON_PNG_SELECTOR,
+    CARBON_SVG_SELECTOR,
+)
 from .utils import code2url, factor2int, get_url_query_param
 
 
@@ -20,9 +27,8 @@ async def from_url(
 
     if device_scale_factor is None:
         export_size_value = get_url_query_param(url, ATTR_TO_QUERY_PARAM["export_size"])
-        scale_factor = (
-            factor2int(export_size_value) if export_size_value is not None else 2
-        )
+        # or `is not None`
+        scale_factor = factor2int(export_size_value) if export_size_value else 2
 
         device_scale_factor = scale_factor
 
@@ -42,7 +48,7 @@ async def from_url(
         # x, y, width, height
         element_bounds = await export_container.boundingBox()
 
-        output_path_and_filename = str(output_path.joinpath("carbon.png"))
+        output_path_and_filename = str(output_path.joinpath(CARBON_FILENAME))
 
         # "clip":
         # {
@@ -50,6 +56,13 @@ async def from_url(
         #     "x": round(element_bounds["x"]),
         #     "height": round(element_bounds["height"]) - 1,
         # }
+
+        # Carbonara:
+        # .screenshot(
+        #     {
+        #         omitBackground: true,
+        #     }
+        # )
 
         await export_container.screenshot(
             {"path": output_path_and_filename, "clip": element_bounds}
@@ -60,11 +73,11 @@ async def from_url(
             {"behavior": "allow", "downloadPath": str(output_path)},
         )
 
-        save_image_trigger = await page.waitForSelector("#export-menu")
+        save_image_trigger = await page.waitForSelector(CARBON_MENU_SELECTOR)
         await save_image_trigger.click()
 
-        png_export_trigger = await page.querySelector("#export-png")
-        svg_export_trigger = await page.querySelector("#export-svg")
+        png_export_trigger = await page.querySelector(CARBON_PNG_SELECTOR)
+        svg_export_trigger = await page.querySelector(CARBON_SVG_SELECTOR)
 
         if extension == "png":
             await png_export_trigger.click()
