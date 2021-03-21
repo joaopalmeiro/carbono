@@ -1,13 +1,28 @@
 from urllib.parse import quote
 
 from .constants.carbon import ATTR_TO_QUERY_PARAM
-from .constants.params import DEFAULT_EXPORT_SIZE
+from .constants.params import (
+    DEFAULT_BG_COLOR,
+    DEFAULT_EXPORT_SIZE,
+    DEFAULT_THEME,
+    DEFAULT_WINDOW_THEME,
+)
 
 
 class Config:
     def __init__(
-        self, export_size: str = DEFAULT_EXPORT_SIZE, watermark: bool = False
+        self,
+        background_color: str = DEFAULT_BG_COLOR,
+        theme: str = DEFAULT_THEME,
+        window_theme: str = DEFAULT_WINDOW_THEME,
+        export_size: str = DEFAULT_EXPORT_SIZE,
+        watermark: bool = False,
     ) -> None:
+        # Order matters (default order of the query parameters for Carbon)
+        self.background_color = background_color
+        self.theme = theme
+        self.window_theme = window_theme
+
         self.export_size = export_size
         self.watermark = watermark
 
@@ -19,7 +34,7 @@ class Config:
 
             result.append(f"{ATTR_TO_QUERY_PARAM[key.lstrip('_')]}={query_value}")
 
-        # `safe="()&="`
+        # or `safe="()&="`
         return quote("&".join(result), safe="&=")
 
     @property
