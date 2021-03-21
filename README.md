@@ -26,7 +26,7 @@ loop.run_until_complete(from_code(code))
 - `poetry install`.
 - `poetry shell`.
 
-To obtain the language map from the Carbon codebase, clone the Carbon repository and follow the steps below:
+To obtain the language map from the Carbon codebase, clone the [Carbon repo](https://github.com/carbon-app/carbon) and follow the steps below:
 
 1. `yarn install`.
 2. `yarn dev`.
