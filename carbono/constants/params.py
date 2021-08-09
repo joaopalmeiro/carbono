@@ -14,7 +14,9 @@ DEFAULT_EXPORT_SIZE: str = EXPORT_SIZE["X2"]
 DEFAULT_BG_COLOR: str = "rgba(171, 184, 195, 1)"
 
 # theme/t
-# Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L34
+# Source:
+# - https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L34
+# - https://github.com/yonicd/carbonate/blob/master/R/set_get_functions.R
 THEMES: Dict[str, str] = {
     "NIGHT_3024": "3024-night",
     "A11Y_DARK": "a11y-dark",

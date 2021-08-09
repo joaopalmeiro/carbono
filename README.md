@@ -82,6 +82,7 @@ console.log(JSON.stringify(langMap, 0, 2));
 - [Carbonara](https://github.com/petersolopov/carbonara).
 - [carbonnow](https://github.com/pokurt/carbon-now-sh-API-Wrapper).
 - [carbonsh](https://github.com/MrMarble/carbonsh).
+- {[carbonate](https://github.com/yonicd/carbonate)}.
 
 ## Notes
 
