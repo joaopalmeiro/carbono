@@ -1,16 +1,9 @@
 from typing import Optional
 from urllib.parse import parse_qsl, quote, unquote, urlsplit
 
-from .config import Config
-from .constants.carbon import CARBON_URL
-
 
 def encode_url(url: str) -> str:
     return quote(url)
-
-
-def code2url(code: str, config: Config) -> str:
-    return f"{CARBON_URL}?{config}&code={encode_url(code)}"
 
 
 def int2px(number: int) -> str:

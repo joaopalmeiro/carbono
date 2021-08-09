@@ -11,8 +11,13 @@ from .constants.carbon import (
     CARBON_MENU_SELECTOR,
     CARBON_PNG_SELECTOR,
     CARBON_SVG_SELECTOR,
+    CARBON_URL,
 )
-from .utils import code2url, factor2int, get_url_query_param
+from .utils import encode_url, factor2int, get_url_query_param
+
+
+def code2url(code: str, config: Config) -> str:
+    return f"{CARBON_URL}?{config}&code={encode_url(code)}"
 
 
 async def from_url(

@@ -25,6 +25,7 @@ loop.run_until_complete(from_code(code))
 
 - `poetry install`.
 - `poetry shell`.
+- `pytest -vv`.
 
 To obtain the language map from the Carbon codebase, clone the [Carbon repo](https://github.com/carbon-app/carbon) and follow the steps below:
 
@@ -79,7 +80,7 @@ console.log(JSON.stringify(langMap, 0, 2));
 
 ## References
 
-- [Carbonara](https://github.com/petersolopov/carbonara).
+- ⭐ [Carbonara](https://github.com/petersolopov/carbonara) (API for Carbon).
 - [carbonnow](https://github.com/pokurt/carbon-now-sh-API-Wrapper).
 - [carbonsh](https://github.com/MrMarble/carbonsh).
 - {[carbonate](https://github.com/yonicd/carbonate)}.
@@ -92,3 +93,11 @@ console.log(JSON.stringify(langMap, 0, 2));
 - [Default values](https://github.com/carbon-app/carbon/blob/main/lib/constants.js).
 - [tohash](https://www.npmjs.com/package/tohash) package.
 - Open Developer Tools for VS Code: `Help` > `Toggle Developer Tools`.
+- [pytest-clarity](https://github.com/darrenburns/pytest-clarity):
+  - A plugin for colored diffs.
+  - `poetry add -D pytest-clarity`.
+  - `poetry remove -D pytest-clarity`.
+- mypy:
+  - [Properties, setter, and Incompatible types in assignment](https://github.com/python/mypy/issues/4167) issue.
+  - [Property setter and getter types can't differ](https://github.com/python/mypy/issues/8084) issue.
+  - [What to do about setters of a different type than their property?](https://github.com/python/mypy/issues/3004) (open) issue.

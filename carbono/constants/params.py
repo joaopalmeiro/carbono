@@ -89,3 +89,9 @@ LANGUAGES: Dict[str, str] = EXTRACTED_LANGUAGES
 
 # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1041
 DEFAULT_LANGUAGE: str = LANGUAGES["AUTO"]
+
+# Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1079
+DEFAULT_DROP_SHADOW_OFFSET_Y: int = 20  # px
+
+# Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1080
+DEFAULT_DROP_SHADOW_BLUR_RADIUS: int = 68  # px
