@@ -90,3 +90,4 @@ console.log(JSON.stringify(langMap, 0, 2));
   - `A-Z a-z 0-9 - _ . ! ~ * ' ( )`.
 - [Default values](https://github.com/carbon-app/carbon/blob/main/lib/constants.js).
 - [tohash](https://www.npmjs.com/package/tohash) package.
+- Open Developer Tools for VS Code: `Help` > `Toggle Developer Tools`.
