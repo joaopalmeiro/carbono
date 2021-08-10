@@ -20,10 +20,14 @@ class Config:
         theme: str = DEFAULT_THEME,
         window_theme: str = DEFAULT_WINDOW_THEME,
         language: str = DEFAULT_LANGUAGE,
+        # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1078
         drop_shadow: bool = True,
         drop_shadow_offset_Y: str = int2px(DEFAULT_DROP_SHADOW_OFFSET_Y),
         drop_shadow_blur_radius: str = int2px(DEFAULT_DROP_SHADOW_BLUR_RADIUS),
+        # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1087
+        window_controls: bool = True,
         export_size: str = DEFAULT_EXPORT_SIZE,
+        # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1092
         watermark: bool = False,
     ) -> None:
         # Order matters (default order of the query parameters for Carbon)
@@ -34,6 +38,7 @@ class Config:
         self.drop_shadow = drop_shadow
         self.drop_shadow_offset_Y = drop_shadow_offset_Y
         self.drop_shadow_blur_radius = drop_shadow_blur_radius
+        self.window_controls = window_controls
 
         self.export_size = export_size
         self.watermark = watermark
