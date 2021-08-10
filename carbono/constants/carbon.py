@@ -36,3 +36,8 @@ ATTR_TO_QUERY_PARAM: Dict[str, str] = {
     "window_controls": "wc",
     "window_theme": "wt",
 }
+
+# `encodeURIComponent()` escapes all characters except:
+# A-Z a-z 0-9 - _ . ! ~ * ' ( )
+# More info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+SAFE_ENCODE_URI_COMPONENT_JS: str = "-_.!~*'()"

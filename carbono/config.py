@@ -1,4 +1,4 @@
-from urllib.parse import quote
+from urllib.parse import quote_plus
 
 from .constants.carbon import ATTR_TO_QUERY_PARAM
 from .constants.params import (
@@ -79,7 +79,12 @@ class Config:
 
         # or `safe="()&="`
         # Source: https://github.com/MrMarble/carbonsh/blob/master/carbonsh/Config.py
-        return quote("&".join(result), safe="&=")
+
+        # `quote_plus()`: like `quote()`, but also replaces spaces with plus signs
+        # More info:
+        # - https://docs.python.org/3.6/library/urllib.parse.html#urllib.parse.quote
+        # - https://docs.python.org/3.6/library/urllib.parse.html#urllib.parse.quote_plus
+        return quote_plus("&".join(result), safe="&=")
 
     @property
     def export_size(self) -> str:
