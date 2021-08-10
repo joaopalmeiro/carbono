@@ -55,6 +55,7 @@ async def from_url(
 
         output_path_and_filename = str(output_path.joinpath(CARBON_FILENAME))
 
+        # Source: https://github.com/MrMarble/carbonsh/blob/master/carbonsh/carbonsh.py#L29
         # "clip":
         # {
         #     **element_bounds,

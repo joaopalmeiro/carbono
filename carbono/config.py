@@ -7,6 +7,7 @@ from .constants.params import (
     DEFAULT_DROP_SHADOW_OFFSET_Y,
     DEFAULT_EXPORT_SIZE,
     DEFAULT_FIRST_LINE_NUMBER,
+    DEFAULT_FONT,
     DEFAULT_LANGUAGE,
     DEFAULT_PADDING_HORIZONTAL,
     DEFAULT_PADDING_VERTICAL,
@@ -36,6 +37,7 @@ class Config:
         # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1089
         line_numbers: bool = False,
         first_line_number: int = DEFAULT_FIRST_LINE_NUMBER,
+        font_family: str = DEFAULT_FONT,
         export_size: str = DEFAULT_EXPORT_SIZE,
         # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1092
         watermark: bool = False,
@@ -54,6 +56,7 @@ class Config:
         self.padding_horizontal = padding_horizontal
         self.line_numbers = line_numbers
         self.first_line_number = first_line_number
+        self.font_family = font_family
 
         self.export_size = export_size
         self.watermark = watermark

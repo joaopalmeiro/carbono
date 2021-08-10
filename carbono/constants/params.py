@@ -24,7 +24,7 @@ THEMES: Dict[str, str] = {
     "BASE_16_DARK": "base16-dark",
     "BASE_16_LIGHT": "base16-light",
     "COBALT": "cobalt",
-    "DRACULA": "dracula",  # or dracula-pro?
+    "DRACULA": "dracula",  # or dracula-pro? / Purchase
     "DUOTONE": "duotone-dark",
     "HOPSCOTCH": "hopscotch",
     "LUCARIO": "lucario",
@@ -104,3 +104,25 @@ DEFAULT_PADDING_HORIZONTAL: int = 56
 
 # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1090
 DEFAULT_FIRST_LINE_NUMBER: int = 1
+
+# Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L3
+FONTS: Dict[str, str] = {
+    "MONOLISA": "MonoLisa",  # Purchase
+    "DANK_MONO": "Dank Mono",
+    "ANONYMOUS_PRO": "Anonymous Pro",
+    "DROID_SANS_MONO": "Droid Sans Mono",
+    "FANTASQUE_SANS_MONO": "Fantasque Sans Mono",
+    "FIRA_CODE": "Fira Code",
+    "HACK": "Hack",
+    "IBM_PLEX_MONO": "IBM Plex Mono",
+    "INCONSOLATA": "Inconsolata",
+    "IOSEVKA": "Iosevka",
+    "JETBRAINS_MONO": "JetBrains Mono",
+    "MONOID": "Monoid",
+    "SOURCE_CODE_PRO": "Source Code Pro",
+    "SPACE_MONO": "Space Mono",
+    "UBUNTU_MONO": "Ubuntu Mono",
+}
+
+# Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1084
+DEFAULT_FONT: str = FONTS["HACK"]
