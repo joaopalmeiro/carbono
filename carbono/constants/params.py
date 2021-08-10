@@ -126,3 +126,9 @@ FONTS: Dict[str, str] = {
 
 # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1084
 DEFAULT_FONT: str = FONTS["HACK"]
+
+# Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1085
+DEFAULT_FONT_SIZE: int = 14
+
+# Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1086
+DEFAULT_LINE_HEIGHT: int = 133

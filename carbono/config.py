@@ -8,13 +8,15 @@ from .constants.params import (
     DEFAULT_EXPORT_SIZE,
     DEFAULT_FIRST_LINE_NUMBER,
     DEFAULT_FONT,
+    DEFAULT_FONT_SIZE,
     DEFAULT_LANGUAGE,
+    DEFAULT_LINE_HEIGHT,
     DEFAULT_PADDING_HORIZONTAL,
     DEFAULT_PADDING_VERTICAL,
     DEFAULT_THEME,
     DEFAULT_WINDOW_THEME,
 )
-from .utils import int2px
+from .utils import int2percent, int2px
 
 
 class Config:
@@ -38,6 +40,8 @@ class Config:
         line_numbers: bool = False,
         first_line_number: int = DEFAULT_FIRST_LINE_NUMBER,
         font_family: str = DEFAULT_FONT,
+        font_size: str = int2px(DEFAULT_FONT_SIZE),
+        line_height: str = int2percent(DEFAULT_LINE_HEIGHT),
         export_size: str = DEFAULT_EXPORT_SIZE,
         # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1092
         watermark: bool = False,
@@ -57,6 +61,8 @@ class Config:
         self.line_numbers = line_numbers
         self.first_line_number = first_line_number
         self.font_family = font_family
+        self.font_size = font_size
+        self.line_height = line_height
 
         self.export_size = export_size
         self.watermark = watermark
