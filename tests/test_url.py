@@ -4,7 +4,7 @@ from carbono.image import code2url
 
 def test_default_url():
     # https://en.wikibooks.org/wiki/Computer_Programming/Hello_world#Python_3
-    code = "print(Hello, World!)"
+    code = 'print("Hello, World!")'
 
     # Manually retrieved from https://carbon.now.sh/ (Incognito window)
     default_url = (
@@ -28,7 +28,7 @@ def test_default_url():
         "si=false&"
         "es=2x&"
         "wm=false&"
-        "code=print%28Hello%252C%2520World%21%29"
+        "code=print%28%2522Hello%252C%2520World%21%2522%29"
     )
 
     generated_url = code2url(code=code, config=Config())
