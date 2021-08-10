@@ -63,7 +63,6 @@ class Config:
         self.font_family = font_family
         self.font_size = font_size
         self.line_height = line_height
-
         self.export_size = export_size
         self.watermark = watermark
 

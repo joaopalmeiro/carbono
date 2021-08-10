@@ -22,6 +22,8 @@ ATTR_TO_QUERY_PARAM: Dict[str, str] = {
     "line_numbers": "ln",
     "padding_horizontal": "ph",
     "padding_vertical": "pv",
+    # Unsupported query parameter (only available in exported configuration)
+    # More info: https://github.com/petersolopov/carbonara#unsupported-params
     "squared_image": "si",
     "theme": "t",
     "watermark": "wm",
