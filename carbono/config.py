@@ -32,6 +32,8 @@ class Config:
         width_adjustment: bool = True,
         padding_vertical: str = int2px(DEFAULT_PADDING_VERTICAL),
         padding_horizontal: str = int2px(DEFAULT_PADDING_HORIZONTAL),
+        # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1089
+        line_numbers: bool = False,
         export_size: str = DEFAULT_EXPORT_SIZE,
         # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1092
         watermark: bool = False,
@@ -48,6 +50,7 @@ class Config:
         self.width_adjustment = width_adjustment
         self.padding_vertical = padding_vertical
         self.padding_horizontal = padding_horizontal
+        self.line_numbers = line_numbers
 
         self.export_size = export_size
         self.watermark = watermark
