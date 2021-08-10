@@ -6,6 +6,7 @@ from .constants.params import (
     DEFAULT_DROP_SHADOW_BLUR_RADIUS,
     DEFAULT_DROP_SHADOW_OFFSET_Y,
     DEFAULT_EXPORT_SIZE,
+    DEFAULT_FIRST_LINE_NUMBER,
     DEFAULT_LANGUAGE,
     DEFAULT_PADDING_HORIZONTAL,
     DEFAULT_PADDING_VERTICAL,
@@ -34,6 +35,7 @@ class Config:
         padding_horizontal: str = int2px(DEFAULT_PADDING_HORIZONTAL),
         # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1089
         line_numbers: bool = False,
+        first_line_number: int = DEFAULT_FIRST_LINE_NUMBER,
         export_size: str = DEFAULT_EXPORT_SIZE,
         # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1092
         watermark: bool = False,
@@ -51,6 +53,7 @@ class Config:
         self.padding_vertical = padding_vertical
         self.padding_horizontal = padding_horizontal
         self.line_numbers = line_numbers
+        self.first_line_number = first_line_number
 
         self.export_size = export_size
         self.watermark = watermark

@@ -101,3 +101,6 @@ DEFAULT_DROP_SHADOW_BLUR_RADIUS: int = 68  # px
 # - https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1073
 DEFAULT_PADDING_VERTICAL: int = 56
 DEFAULT_PADDING_HORIZONTAL: int = 56
+
+# Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1090
+DEFAULT_FIRST_LINE_NUMBER: int = 1
