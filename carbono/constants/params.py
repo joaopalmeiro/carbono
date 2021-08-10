@@ -95,3 +95,9 @@ DEFAULT_DROP_SHADOW_OFFSET_Y: int = 20  # px
 
 # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1080
 DEFAULT_DROP_SHADOW_BLUR_RADIUS: int = 68  # px
+
+# Source:
+# - https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1072
+# - https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1073
+DEFAULT_PADDING_VERTICAL: int = 56
+DEFAULT_PADDING_HORIZONTAL: int = 56

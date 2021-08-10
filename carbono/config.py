@@ -7,6 +7,8 @@ from .constants.params import (
     DEFAULT_DROP_SHADOW_OFFSET_Y,
     DEFAULT_EXPORT_SIZE,
     DEFAULT_LANGUAGE,
+    DEFAULT_PADDING_HORIZONTAL,
+    DEFAULT_PADDING_VERTICAL,
     DEFAULT_THEME,
     DEFAULT_WINDOW_THEME,
 )
@@ -26,6 +28,10 @@ class Config:
         drop_shadow_blur_radius: str = int2px(DEFAULT_DROP_SHADOW_BLUR_RADIUS),
         # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1087
         window_controls: bool = True,
+        # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1088
+        width_adjustment: bool = True,
+        padding_vertical: str = int2px(DEFAULT_PADDING_VERTICAL),
+        padding_horizontal: str = int2px(DEFAULT_PADDING_HORIZONTAL),
         export_size: str = DEFAULT_EXPORT_SIZE,
         # Source: https://github.com/carbon-app/carbon/blob/main/lib/constants.js#L1092
         watermark: bool = False,
@@ -39,6 +45,9 @@ class Config:
         self.drop_shadow_offset_Y = drop_shadow_offset_Y
         self.drop_shadow_blur_radius = drop_shadow_blur_radius
         self.window_controls = window_controls
+        self.width_adjustment = width_adjustment
+        self.padding_vertical = padding_vertical
+        self.padding_horizontal = padding_horizontal
 
         self.export_size = export_size
         self.watermark = watermark
